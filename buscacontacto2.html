@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto - Programa Mujeres Jefas de Hogar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* ===========================
+            VARIABLES DE DISEÑO - PALETA VIBRANTE
+        =========================== */
+        :root {
+            --color-primary: #8A2BE2; /* Azul Violeta (principal) */
+            --color-secondary: #FF69B4; /* Rosa Fuerte (acento) */
+            --color-text-dark: #2c3e50;
+            --color-card-bg: #ffffff;
+            --color-bg-gradient-start: #f8f0ff;
+            --color-bg-gradient-end: #eaf2ff;
+
+            --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --border-radius-card: 18px;
+            --border-radius-btn: 10px;
+            --max-content-width: 1200px;
+            --spacing-lg: 60px;
+            --spacing-md: 30px;
+            --spacing-sm: 15px;
+        }
+
+        /* ===========================
+            RESET Y GLOBAL
+        =========================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+            background: linear-gradient(145deg, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+            min-height: 100vh;
+        }
+
+        .main-wrapper {
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            padding: 20px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-primary);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-secondary);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===========================
+            BOTONES GENERALES
+        =========================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: var(--border-radius-btn);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(var(--color-primary), 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #721bb9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(var(--color-primary), 0.3);
+        }
+
+        .btn-large {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+        }
+
+        /* ===========================
+            SECCIONES GENERALES
+        =========================== */
+        .section {
+            padding: var(--spacing-lg) var(--spacing-sm);
+            text-align: center;
+        }
+
+        .section-header {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .section-header h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--color-text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ===========================
+            SECCIÓN CONTACTO-INFO (Coordinación)
+        =========================== */
+        .section-contact-info {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-hover);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .contact-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+
+        .contact-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+            text-align: left;
+        }
+
+        .contact-card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius-card);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos de íconos y tarjetas por tipo */
+        .contact-card-email .card-icon {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        .contact-card-whatsapp .card-icon {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-details strong {
+            font-size: 1.1rem;
+            color: var(--color-text-dark);
+        }
+
+        .contact-role {
+            font-size: 0.85rem;
+            color: var(--color-secondary);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .title-whatsapp {
+            color: #25D366;
+        }
+
+        .btn-contact-small {
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 8px;
+            align-self: flex-start;
+            border-radius: 6px;
+            background-color: var(--color-primary);
+            color: white;
+            text-transform: none; /* No queremos mayúsculas para el email */
+        }
+
+        .btn-whatsapp-link {
+            background-color: #25D366;
+        }
+
+        .btn-whatsapp-link:hover {
+            background-color: #128C7E;
+        }
+        .btn-contact-small:hover {
+            background-color: var(--color-secondary);
+        }
+
+        /* ===========================
+            SECTION POSTULA (Llamada a la Acción Didáctica)
+        =========================== */
+        .section-postula {
+            background: var(--color-bg-light);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-hover);
+            margin-top: var(--spacing-lg);
+            padding: 0;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .postula-content {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+        }
+
+        .postula-text {
+            flex: 2;
+        }
+
+        .postula-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .postula-visual img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .postula-text h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-secondary);
+            font-size: 2.2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .postula-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-dark);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .info-block {
+            background-color: #fcf6ff;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius-btn);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .info-block h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-block ul li {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .benefits-block ul li i {
+            color: #4CAF50;
+        }
+
+        .requirements-block {
+            border: 2px solid #E57373;
+            background-color: #FFF5F5;
+        }
+
+        .requirements-block h4 {
+            color: #E57373;
+        }
+
+        .requirements-block ul li i {
+            color: #E57373;
+        }
+
+        .cta-postula {
+            margin-top: var(--spacing-sm);
+        }
+
+        /* ===========================
+            FOOTER (Mínimo necesario para la estética)
+        =========================== */
+        .footer {
+            background-color: var(--color-text-dark);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .footer-container {
+            padding-bottom: 20px;
+        }
+        .footer-bottom p {
+             font-size: 0.8rem;
+        }
+        
+
+        /* ===========================
+            RESPONSIVE
+        =========================== */
+        @media (max-width: 900px) {
+            .postula-content {
+                flex-direction: column;
+                text-align: center;
+                padding: var(--spacing-md);
+            }
+            .postula-visual {
+                order: -1;
+                margin-bottom: var(--spacing-md);
+            }
+            .postula-visual img {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-grid-modern {
+                grid-template-columns: 1fr;
+            }
+            .postula-visual img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        
+        <section class="section section-contact-info" id="info-programa">
+            <div class="section-header">
+                <h3 class="contact-title">Contacta a las Coordinadoras del Programa</h3>
+                <p class="section-description">Nuestro equipo está listo para resolver tus dudas sobre postulación y requisitos. Elige tu canal de contacto preferido.</p>
+            </div>
+            <div class="contact-grid-modern">
+                
+                <div class="contact-card contact-card-email">
+                    <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <p class="contact-role">Coordinadora General</p>
+                        <strong>Maureen Hantze Zbinden Salazar</strong>
+                        <a href="mailto:mzbinden@losangeles.cl" class="btn-contact-small">Enviar Email</a>
+                    </div>
+                </div>
+
+                <div class="contact-card contact-card-email">
+                    <div class="card-icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <div class="contact-details">
+                        <p class="contact-role">Asesora de Emprendimiento</p>
+                        <strong>Evelyn Johana Bustos Monje</strong>
+                        <a href="mailto:ebustos@losangangelos.cl" class="btn-contact-small">Enviar Email</a>
+                    </div>
+                </div>
+
+                <div class="contact-card contact-card-whatsapp">
+                    <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-details">
+                        <p class="contact-role title-whatsapp">¿Tienes un Negocio o PYME?</p>
+                        <strong>Asesoría de Emprendimiento</strong>
+                        <a href="https://wa.me/56971023371" target="_blank" class="btn-contact-small btn-whatsapp-link">WhatsApp (+56 9 7102 3371)</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card contact-card-whatsapp">
+                    <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="contact-details">
+                        <p class="contact-role title-whatsapp">¿Buscas Empleo Formal?</p>
+                        <strong>Asesoría de Intermediación</strong>
+                        <a href="https://wa.me/56935967825" target="_blank" class="btn-contact-small btn-whatsapp-link">WhatsApp (+56 9 3596 7825)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section section-postula" id="contacto">
+            <div class="postula-content">
+                <div class="postula-text">
+                    <h2>¡Postula al Programa Mujeres Jefas de Hogar!</h2>
+                    <p class="postula-subtitle">Es tu oportunidad de impulsar tu autonomía económica. Accede a formación, talleres y una red de apoyo.</p>
+
+                    <div class="info-block benefits-block">
+                        <h4><i class="fas fa-hand-holding-heart"></i> Beneficios Clave del Programa</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Talleres de formación para el trabajo y el emprendimiento.</li>
+                            <li><i class="fas fa-check-circle"></i> Capacitaciones específicas para desarrollo de PYMES.</li>
+                            <li><i class="fas fa-check-circle"></i> Red de apoyo para lograr autonomía económica.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block requirements-block">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Requisitos Esenciales</h4>
+                        <ul>
+                            <li class="warning-text"><i class="fas fa-times-circle"></i> Ser jefa de hogar en el Registro Social de Hogares.</li>
+                            <li class="warning-text"><i class="fas fa-times-circle"></i> Residencia en Los Ángeles con hasta un 80% de vulnerabilidad.</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://www.chileatiende.gob.cl/fichas/12885-programa-mujeres-jefas-de-hogar" class="btn btn-primary btn-large cta-postula" target="_blank">Leer requisitos completos y postular</a>
+                </div>
+                
+                <div class="postula-visual">
+                    <img src="https://via.placeholder.com/400x400/8A2BE2/ffffff?text=Mujer+Lider+Inspiracion" alt="Ilustración mujer líder">
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contactar">
+            <div class="footer-container">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Conecta Emprendedoras. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

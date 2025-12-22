@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creac_ionesMabel</title>
+  <link rel="stylesheet" href="EstilosPag.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">CM</div>
+        <h1>Creac_ionesMabel</h1>
+      </div>
+    </header>
+
+    <!-- Perfil emprendedora -->
+    <section class="section perfil">
+      <div class="perfil-container">
+        <img src="emprendedoras/LOGOS/Logo Crea_ciones.jpg" alt="Elyan Wood Contrucciones" class="perfil-img">
+        <div class="perfil-info">
+          <h2>Creac_ionesMabel</h2>
+          <p class="desc">Ofrezco una línea de creaciones de velas artesanales, tanto de soya como de parafina. Y llegando a rescatar el aceite de cocina reciclando y transformando en  velas decorativas.contribuyendo con un granito al reciclaje... también tengo figuras pintadas a mano para decoración o regalos ..tu elijes la ocasión..reparto dentro del radio urbano y rural también en mi domicilio..disfruta la experiencia.</p>
+          
+      </div>
+    </section1>
+
+    
+            <div style="text-align: center; margin-top: 20px; color: #555;">
+              <p>📍 Retiro desde mi hogar y entregas dentro de la zona urbana</p>
+              <a href="https://wa.me/56932770872?text=Hola%2C%20vengo%20de%20la%20Vitrina%20Digital%20%22Conecta%20Emprendedoras%22.%20Me%20interesa%20saber%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i>WhatsApp </a>
+
+              <a href="Email:erica1969almendras@gmail.com?subject=Consulta%20desde%20la%20Vitrina%20Digital%20Conecta%20Emprendedoras" class="btn btn-email">
+                       <i class="fas fa-envelope"></i> Enviar Correo
+          </a>
+            </div>
+
+
+    </section1>
+
+
+    
+
+    <!-- Galería de productos -->
+    <section class="section">
+      <h2>Galería de productos</h2>
+      <div class="grid galeria">
+        <div class="card"><img src="emprendedoras/Erica Almendras/Creac_ionesMabel/1.jpg" alt="Producto 1"></div>
+        <div class="card"><img src="emprendedoras/Erica Almendras/Creac_ionesMabel/2.jpg" alt="Producto 2"></div>
+        <div class="card"><img src="emprendedoras/Erica Almendras/Creac_ionesMabel/3.jpg" alt="Producto 3"></div>
+        <div class="card"><img src="emprendedoras/Erica Almendras/Creac_ionesMabel/4.jpg" alt="Producto 4"></div>
+        <div class="card"><img src="emprendedoras/Erica Almendras/Creac_ionesMabel/5.jpg" alt="Producto 5"></div>
+        <div class="card"><img src="emprendedoras/Erica Almendras/Creac_ionesMabel/6.jpg" alt="Producto 6"></div>
+        </div>
+    </section>
+
+    <!-- Botón volver -->
+    <div class="section">
+      <button class="btn" onclick="window.location.href='index.html'">Volver a Categorías</button>
+    </div>
+  </div>
+
+<!-- Bloque de Instagram -->
+<section class="section instagram">
+  <h2>Sígueme en Instagram</h2>
+  <div class="instagram-container">
+    <!-- QR -->
+    <img src="emprendedoras/QR PLATAFORMAS/creac_ionesmabel_qr.png" alt="QR Instagram Elyan " class="instagram-qr">
+    
+    <!-- Botón redirección -->
+    <div class="instagram-info">
+      <p>@Creac_ionesMabel</p>
+      <button class="btn" onclick="window.open('https://www.instagram.com/creac_ionesmabel/', '_blank')">
+  Ir a Instagram
+</button>
+
+    </div>
+  </div>
+</section>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    function checkCards() {
+      const triggerBottom = window.innerHeight - 50;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkCards);
+    window.addEventListener('load', checkCards);
+  </script>
+
+
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>

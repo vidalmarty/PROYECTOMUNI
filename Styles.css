@@ -1,0 +1,168 @@
+/* Variables de Color (Morado/Turquesa) */
+:root {
+    --color-primary: #7d44e6;     /* Morado medio (base del fondo Hero) */
+    --color-secondary: #00c99f;   /* Turquesa/Cian vibrante (Botón CTA) */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-bg-dark: #5c30b3;     /* Morado oscuro (fondo inclinado detrás de la persona) */
+    --color-input-bg: #dcd3f8;    /* Morado muy claro (fondo de los inputs) */
+    --color-header-accent: #9b72ec; /* Morado claro para acentos en el Header */
+}
+
+/* Base y Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--color-text-dark); }
+a { text-decoration: none; color: var(--color-text-dark); }
+ul { list-style: none; }
+
+/* 1. Header (Se mantiene igual) */
+header {
+    display: flex; justify-content: space-between; align-items: center; padding: 15px 50px;
+    background: var(--color-text-light); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); position: relative; z-index: 10;
+}
+.logo-text { font-size: 20px; font-weight: 700; color: var(--color-header-accent); display: block; line-height: 1; }
+.logo-tagline { font-size: 12px; color: var(--color-text-dark); }
+.main-nav ul { display: flex; gap: 20px; align-items: center; }
+.main-nav a { font-size: 14px; font-weight: 600; padding: 5px 0; transition: color 0.3s; }
+.main-nav a:hover { color: var(--color-header-accent); }
+.btn-consultoria { /* No usado en este HTML, pero se mantiene */
+    background: var(--color-secondary); color: var(--color-text-light) !important;
+    padding: 8px 15px; border-radius: 5px; font-weight: 700 !important; font-size: 14px; transition: background 0.3s;
+}
+.btn-consultoria:hover { background: #009c7a; }
+
+/* 2. Sección Principal (Hero) - AJUSTES PARA IMAGEN CIRCULAR */
+.hero-section {
+    position: relative; 
+    overflow: hidden; 
+    padding-top: 50px; 
+    background: var(--color-primary); 
+    min-height: 600px; /* Asegura suficiente espacio */
+    display: flex; /* Añadido para mejor centrado vertical si el contenido es corto */
+    align-items: center; /* Centra verticalmente el hero-content */
+}
+.hero-content {
+    display: flex; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    color: var(--color-text-light);
+    position: relative; 
+    z-index: 5;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible del max-width */
+}
+.text-and-form { flex: 1.3; padding: 40px 50px 80px 50px; z-index: 6; }
+.hero-image { 
+    flex: 0.7; 
+    position: relative; 
+    z-index: 7; 
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro de su contenedor */
+    align-items: center;
+    padding: 20px; /* Espacio alrededor de la imagen */
+    /* Remueve el padding-top si tu imagen PNG ya tiene el fondo morado */
+    /* padding-top: 20px; */ 
+}
+
+/* Fondo inclinado (Se mantiene igual, ajustado para que cubra bien) */
+.hero-section::before {
+    content: ''; position: absolute; top: 0; right: 0; bottom: 0;
+    width: 55%; 
+    background-color: var(--color-bg-dark); 
+    transform: skewX(-15deg); 
+    transform-origin: top right;
+    z-index: 1; 
+}
+
+/* >>>>>> ESTILOS CLAVE PARA LA IMAGEN CIRCULAR <<<<<< */
+.hero-image img {
+    display: block; 
+    width: 400px; /* Tamaño fijo para el círculo (ajusta según necesites) */
+    height: 400px; /* Debe ser igual al width para un círculo perfecto */
+    border-radius: 50%; /* ¡Esto la hace redonda! */
+    object-fit: cover; /* Recorta la imagen para que quepa en el círculo sin distorsión */
+    object-position: center; /* Centra el contenido de la imagen */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra y borde brillante */
+    border: 5px solid var(--color-secondary); /* Borde con el color turquesa */
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el mouse */
+}
+
+.hero-image img:hover {
+    transform: scale(1.03); /* Ligeramente más grande al pasar el mouse */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* 3. Estilos de Texto (Se mantienen igual) */
+.headline-q { font-size: 24px; font-weight: 400; margin-bottom: 5px; color: var(--color-header-accent); }
+.headline-main { font-size: 48px; font-weight: 700; line-height: 1; margin-bottom: 10px; }
+.headline-sub { font-size: 28px; font-weight: 400; margin-bottom: 30px; }
+.cta-text { font-size: 16px; margin-bottom: 30px; max-width: 550px; }
+.highlight {
+    font-weight: 700; text-transform: uppercase; color: var(--color-text-light); 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 4. Estilo del Botón (btn-submit) - Se mantiene igual */
+.btn-submit {
+    display: inline-block; 
+    padding: 15px 40px; 
+    background: var(--color-secondary);
+    color: var(--color-text-light) !important; 
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.btn-submit:hover { background: #009c7a; }
+
+/* 5. Footer (Se mantiene igual) */
+footer {
+    text-align: center; padding: 20px 50px; 
+    background-color: var(--color-text-light); /* Fondo blanco para el footer */
+    color: var(--color-text-dark); 
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Sombra superior sutil */
+}
+
+/* 6. Responsive (Ajustes para pantallas más pequeñas) */
+@media (max-width: 992px) {
+    .hero-content { flex-direction: column; text-align: center; }
+    .text-and-form { padding: 40px 20px; }
+    .hero-image { padding: 20px 0; } /* Ajusta el padding de la imagen */
+    .hero-image img { width: 300px; height: 300px; } /* Más pequeña en tablets */
+    .hero-section::before { /* Ajusta el fondo inclinado para pantallas más pequeñas */
+        width: 100%;
+        transform: skewY(-5deg); /* Cambia la dirección de la inclinación si se hace columna */
+        transform-origin: top left;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+        z-index: 0; /* Asegura que esté detrás de todo el contenido */
+    }
+    .hero-section { min-height: auto; padding-bottom: 50px;} /* Ajusta la altura mínima */
+}
+
+@media (max-width: 768px) {
+    header { padding: 10px 20px; }
+    .logo-text { font-size: 18px; }
+    .logo-tagline { font-size: 11px; }
+    .main-nav a { font-size: 13px; }
+    .headline-main { font-size: 38px; }
+    .headline-sub { font-size: 22px; }
+    .cta-text { font-size: 15px; }
+    .btn-submit { padding: 12px 30px; font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    header { flex-direction: column; gap: 10px; }
+    .main-nav ul { justify-content: center; }
+    .text-and-form { padding: 30px 15px; }
+    .headline-main { font-size: 32px; }
+    .headline-sub { font-size: 18px; }
+    .cta-text { font-size: 14px; }
+    .hero-image img { width: 250px; height: 250px; } /* Aún más pequeña en móviles */
+}

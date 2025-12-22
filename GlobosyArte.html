@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>elyan wood Construcciones</title>
+  <link rel="stylesheet" href="EstilosPag.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">GYA</div>
+        <h1>Globos y Arte </h1>
+      </div>
+    </header>
+
+    <!-- Perfil emprendedora -->
+    <section class="section perfil">
+      <div class="perfil-container">
+        <img src="emprendedoras/LOGOS/Logo GlobosARTE.jpg" alt="Globos y Arte" class="perfil-img">
+        <div class="perfil-info">
+          <h2>Globos y arte</h2>
+          <p class="desc">" Ofrezco decoraciones y Bouquet de globos para todo tipo de eventos, realizadas con el Arte en globos Totalmente personalizadas y con paneles en tendencia. 
+" Todo lo que te imagines en globos, Yo lo hago posible " 
+</p>
+          
+      </div>
+
+
+
+
+
+
+
+       </section1>
+
+            <div style="text-align: center; margin-top: 20px; color: #555;">
+              <p>📍 Retiro desde mi hogar y entregas dentro de la zona urbana</p>
+              <a href="https://wa.me/56948421860?text=Hola%2C%20vengo%20de%20la%20Vitrina%20Digital%20%22Conecta%20Emprendedoras%22.%20Me%20interesa%20saber%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i>WhatsApp </a>
+
+              <a href="Email:Yusdarybautista@gmail.com?subject=Consulta%20desde%20la%20Vitrina%20Digital%20Conecta%20Emprendedoras" class="btn btn-email">
+                       <i class="fas fa-envelope"></i> Enviar Correo
+    </div>
+    </section1>
+    <!-- Galería de productos -->
+    <section class="section">
+      <h2>Galería de productos</h2>
+      <div class="grid galeria">
+        <div class="card"><img src="emprendedoras/Yusdary bautista/Globo y arte/1.jpg" alt="Producto 1"></div>
+        <div class="card"><img src="emprendedoras/Yusdary bautista/Globo y arte/2.jpg" alt="Producto 2"></div>
+        <div class="card"><img src="emprendedoras/Yusdary bautista/Globo y arte/3.jpg" alt="Producto 3"></div>
+        <div class="card"><img src="emprendedoras/Yusdary bautista/Globo y arte/4.jpg" alt="producto 4"></div>
+        <div class="card"><img src="emprendedoras/Yusdary bautista/Globo y arte/5.jpg" alt="Producto 5"></div>
+        <div class="card"><img src="emprendedoras/Yusdary bautista/Globo y arte/6.jpg" alt="Producto 6"></div>
+      </div>
+    </section>
+
+ 
+<!-- Bloque de Instagram -->
+<section class="section instagram">
+  <h2>Sígueme en Instagram</h2>
+  <div class="instagram-container">
+    <!-- QR -->
+    <img src="emprendedoras/QR PLATAFORMAS/globos_y_arte_qr.png" alt="QR Instagram Elyan " class="instagram-qr">
+    
+    <!-- Botón redirección -->
+    <div class="instagram-info">
+      <p>@Globos_y_arte</p>
+      <button class="btn" onclick="window.open('https://www.instagram.com/globos_y_arte/', '_blank')">
+  Ir a Instagram
+</button>
+
+    </div>
+  </div>
+</section>
+
+   <!-- Botón volver -->
+    <div class="section">
+      <button class="btn" onclick="window.location.href='index.html'">Volver a Categorías</button>
+    </div>
+  </div>
+
+
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    function checkCards() {
+      const triggerBottom = window.innerHeight - 50;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkCards);
+    window.addEventListener('load', checkCards);
+  </script>
+
+
+
+</body>
+</html>
+
