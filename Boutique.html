@@ -9,41 +9,38 @@
 <body>
 
   <div class="container">
-    <!-- Header -->
     <header>
       <div class="brand">
-        <div class="">BMF</div>
+        <div class="logo">BMF</div>
         <h1>Boutique Modas Flores</h1>
       </div>
     </header>
 
-    <!-- Perfil emprendedora -->
     <section class="section perfil">
       <div class="perfil-container">
         <img src="emprendedoras/LOGOS/logo Boutique.jpg" alt="Boutique Modas Flores" class="perfil-img">
         <div class="perfil-info">
           <h2>Boutique Modas Flores</h2>
-          <p class="desc">En Boutique Modas Flores encontrarás ropa femenina moderna, cómoda y con estilo, especialmente seleccionada para mujeres reales que aman verse bien y sentirse seguras. Ofrecemos prendas  con tallas que van desde la estándar hasta las tallas grandes, pensadas para resaltar tu figura y acompañarte en cada ocasión.
-
-Brindamos una atención personalizada, ventas desde nuestro hogar y entregas a domicilio, para que disfrutes de una experiencia de compra fácil, confiable y cercana.</p>
-          
+          <p class="desc">En Boutique Modas Flores encontrarás ropa femenina moderna, cómoda y con estilo, especialmente seleccionada para mujeres reales que aman verse bien y sentirse seguras. <br><br>
+          Ofrecemos prendas con tallas que van desde la estándar hasta las tallas grandes, pensadas para resaltar tu figura. Brindamos una atención personalizada con entregas a domicilio, para una experiencia de compra fácil y confiable.</p>
+        </div>
       </div>
-    </section1>
+    </section>
 
-    
-            <div style="text-align: center; margin-top: 20px; color: #555;">
-      <p>📞 Teléfono: +56 9 32467493 </p>
-      <p>📍 Retiro desde mi hogar y entregas dentro de la zona urbana</p>
-      <p>✉️ Email:flores91@gmail.com</p>
-    </div>
+    <section class="section">
+      <div style="text-align: center; margin-top: 20px; color: #555;">
+        <p>📍 Retiro desde mi hogar y entregas dentro de la zona urbana</p>
+        
+        <a href="https://wa.me/56932467493?text=Hola%2C%20vengo%20de%20la%20Vitrina%20Digital%20%22Conecta%20Emprendedoras%22.%20Me%20interesa%20saber%20más%20sobre%20sus%20productos." target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
 
+        <a href="mailto:flores91@gmail.com?subject=Consulta%20desde%20la%20Vitrina%20Digital" class="btn btn-email">
+          <i class="fas fa-envelope"></i> Enviar Correo
+        </a>
+      </div>
+    </section>
 
-    </section1>
-
-
-    
-
-    <!-- Galería de productos -->
     <section class="section">
       <h2>Galería de productos</h2>
       <div class="grid galeria">
@@ -53,37 +50,29 @@ Brindamos una atención personalizada, ventas desde nuestro hogar y entregas a d
         <div class="card"><img src="emprendedoras/Maritza Flores/Boutique/5.jpg" alt="Producto 4"></div>
         <div class="card"><img src="emprendedoras/Maritza Flores/Boutique/6.jpg" alt="Producto 5"></div>
         <div class="card"><img src="emprendedoras/Maritza Flores/Boutique/Imagen de WhatsApp 2025-10-06 a las 14.51.25_bad10771.jpg" alt="Producto 6"></div>
-        </div>
+      </div>
     </section>
 
+    <section class="section instagram">
+      <h2>Sígueme en Instagram</h2>
+      <div class="instagram-container">
+        <img src="emprendedoras/QR PLATAFORMAS/modasflores2235_qr.png" alt="QR Instagram" class="instagram-qr">
+        <div class="instagram-info">
+          <p>@Modasflores2235</p>
+          <button class="btn" onclick="window.open('https://www.instagram.com/modasflores2235/', '_blank')">
+            Ir a Instagram
+          </button>
+        </div>
+      </div>
+    </section>
 
-<!-- Bloque de Instagram -->
-<section class="section instagram">
-  <h2>Sígueme en Instagram</h2>
-  <div class="instagram-container">
-    <!-- QR -->
-    <img src="emprendedoras/QR PLATAFORMAS/modasflores2235_qr.png" alt="QR Instagram Elyan " class="instagram-qr">
-    
-    <!-- Botón redirección -->
-    <div class="instagram-info">
-      <p>@Modasflores2235</p>
-      <button class="btn" onclick="window.open('https://www.instagram.com/modasflores2235/', '_blank')">
-  Ir a Instagram
-</button>
-
-    </div>
-  </div>
-</section>
-
-   <!-- Botón volver -->
     <div class="section">
-      <button class="btn" onclick="window.location.href='index.html'">Volver a Categorías</button>
+      <button class="btn" onclick="window.location.href='Inicio.html'">Volver a Categorías</button>
     </div>
   </div>
 
-<script>
+  <script>
     const cards = document.querySelectorAll('.card');
-
     function checkCards() {
       const triggerBottom = window.innerHeight - 50;
       cards.forEach(card => {
@@ -93,15 +82,9 @@ Brindamos una atención personalizada, ventas desde nuestro hogar y entregas a d
         }
       });
     }
-
     window.addEventListener('scroll', checkCards);
     window.addEventListener('load', checkCards);
   </script>
 
-
-
 </body>
 </html>
-
-
-

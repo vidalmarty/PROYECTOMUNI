@@ -9,7 +9,6 @@
 <body>
 
   <div class="container">
-    <!-- Header -->
     <header>
       <div class="brand">
         <div class="logo">G Y C</div>
@@ -17,34 +16,30 @@
       </div>
     </header>
 
-    <!-- Perfil emprendedora -->
     <section class="section perfil">
       <div class="perfil-container">
         <img src="emprendedoras/LOGOS/Logo KyM.jpg" alt="Globos y sorpresas kmy" class="perfil-img">
         <div class="perfil-info">
-          <h2>Globos y sorpresas kmy </h2>
-          <p class="desc">Globos y Sorpresas Kmy es un emprendimiento dedicado a crear momentos inolvidables a través de detalles únicos y personalizados. 🌸✨
-
-              Ofrecemos una amplia variedad de desayunos sorpresa, box temáticos, y regalos personalizados como tazones, botellas, poleras, puzzles, vasos, agendas, entre otros productos especiales diseñados con amor. 💝
-              ideales para sorprender en cumpleaños, aniversarios, fechas especiales o simplemente para regalar alegría. 🎁🎈
-
-              En Globos y Sorpresas Kmy, cada detalle está pensado para reflejar emociones, transmitir cariño y hacer que cada sorpresa sea inolvidable. 💕</p>                  
+          <h2>Globos y sorpresas kmy</h2>
+          <p class="desc">Globos y Sorpresas Kmy es un emprendimiento dedicado a crear momentos inolvidables a través de detalles únicos y personalizados. 🌸✨<br><br>
+          Ofrecemos una amplia variedad de desayunos sorpresa, box temáticos, y regalos personalizados como tazones, botellas, poleras, puzzles, vasos, agendas, entre otros productos especiales diseñados con amor. 💝 Ideales para sorprender en cumpleaños, aniversarios, fechas especiales o simplemente para regalar alegría. 🎁🎈<br><br>
+          En Globos y Sorpresas Kmy, cada detalle está pensado para reflejar emociones, transmitir cariño y hacer que cada sorpresa sea inolvidable. 💕</p>
+        </div>
       </div>
-    </section1>
+    </section>
 
-
-  <section>
-            <div style="text-align: center; margin-top: 20px; color: #555;">
-              <p>📍 Retiro desde mi hogar y entregas dentro de la zona urbana</p>
-              <a href="https://wa.me/56987105703?text=Hola%2C%20vengo%20de%20la%20Vitrina%20Digital%20%22Conecta%20Emprendedoras%22.%20Me%20interesa%20saber%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank" class="btn btn-whatsapp">
-              <i class="fab fa-whatsapp"></i>WhatsApp </a>
-
-              <a href="Email:Globosysorpresaskmy@gmail.com?subject=Consulta%20desde%20la%20Vitrina%20Digital%20Conecta%20Emprendedoras" class="btn btn-email">
-                       <i class="fas fa-envelope"></i> Enviar Correo
+    <section class="section">
+      <div style="text-align: center; margin-top: 20px; color: #555;">
+        <p>📍 Retiro desde mi hogar y entregas dentro de la zona urbana</p>
+        <a href="https://wa.me/56987105703?text=Hola%2C%20vengo%20de%20la%20Vitrina%20Digital%20%22Conecta%20Emprendedoras%22.%20Me%20interesa%20saber%20más%20sobre%20sus%20productos%20y%20servicios." target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:Globosysorpresaskmy@gmail.com?subject=Consulta%20desde%20la%20Vitrina%20Digital%20Conecta%20Emprendedoras" class="btn btn-email">
+          <i class="fas fa-envelope"></i> Enviar Correo
+        </a>
       </div>
-    </section1>
+    </section>
 
-    <!-- Galería de productos -->
     <section class="section">
       <h2>Galería de productos</h2>
       <div class="grid galeria">
@@ -54,42 +49,29 @@
         <div class="card"><img src="emprendedoras/Camila González/Globos y Sorpresass/4.jpg" alt="Producto 4"></div>
         <div class="card"><img src="emprendedoras/Camila González/Globos y Sorpresass/5.jpg" alt="Producto 5"></div>
         <div class="card"><img src="emprendedoras/Camila González/Globos y Sorpresass/6.jpg" alt="Producto 6"></div>
-        </div>
+      </div>
     </section>
 
-
-    
-<!-- Bloque de Instagram -->
-<section class="section instagram">
-  <h2>Sígueme en Instagram</h2>
-  <div class="instagram-container">
-    <!-- QR -->
-    <img src="emprendedoras/QR PLATAFORMAS/globos_sorpresas_kmy_qr.png" alt="QR Instagram Elyan " class="instagram-qr">
-    
-    <!-- Botón redirección -->
-    <div class="instagram-info">
-      <p>@globos_sorpresas_kmy </p>
-      <button class="btn" onclick="window.open('https://www.instagram.com/globos_sorpresas_kmy/', '_blank')">
-  Ir a Instagram
-</button>
-
-    </div>
-  </div>
-</section>
-
-
-
-   <!-- Botón volver -->
     <div class="section">
-      <button class="btn" onclick="window.location.href='index.html'">Volver a Categorías</button>
+      <button class="btn" onclick="window.location.href='Inicio.html'">Volver a Categorías</button>
     </div>
   </div>
 
+  <section class="section instagram">
+    <h2>Sígueme en Instagram</h2>
+    <div class="instagram-container">
+      <img src="emprendedoras/QR PLATAFORMAS/globos_sorpresas_kmy_qr.png" alt="QR Instagram" class="instagram-qr">
+      <div class="instagram-info">
+        <p>@globos_sorpresas_kmy</p>
+        <button class="btn" onclick="window.open('https://www.instagram.com/globos_sorpresas_kmy/', '_blank')">
+          Ir a Instagram
+        </button>
+      </div>
+    </div>
+  </section>
 
-
-<script>
+  <script>
     const cards = document.querySelectorAll('.card');
-
     function checkCards() {
       const triggerBottom = window.innerHeight - 50;
       cards.forEach(card => {
@@ -103,12 +85,5 @@
     window.addEventListener('load', checkCards);
   </script>
 
-
-
 </body>
 </html>
-
-
-
-
-
